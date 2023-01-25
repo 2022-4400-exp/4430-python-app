@@ -35,7 +35,7 @@ jobs:
         id: update-image-tag
         continue-on-error: true
         run: |
-          yq eval '.spec.template.spec.containers[0].image = "ghcr.io/2022-4400-exp/4430-python-app:"+env(GITHUB_SHA)' -i ./manifest/deployment.yaml
+          yq eval '.spec.template.spec.containers[0].image = "ghcr.io/2022-4400-exp/4430-python-app:"+env(GITHUB_SHA)' -i ./manifest/m19089_deployment.yaml
           git diff --name-only --exit-code
 
 
