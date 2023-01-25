@@ -15,9 +15,9 @@ spec:
         app: python
     spec:
       containers:
-      - image: mamadanasi/python-app
-        name: python
-        volumeMounts:
+        - image: ghcr.io/2022-4400-exp/4430-python-app:cabc75cd01516b47458d7a4c1673fdb0803ea0c6
+          name: python
+          volumeMounts:
             - mountPath: /var/python-app
               name: python-pvc
       volumes:
